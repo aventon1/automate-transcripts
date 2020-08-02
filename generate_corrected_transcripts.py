@@ -5,6 +5,7 @@
 import sys
 import re
 import csv
+import os
 from itertools import zip_longest
 from collections import Counter
 
@@ -193,7 +194,7 @@ if __name__ == "__main__":
     output_rows = replace_text(index_row, orig_text_transcript_col, correct_token_col, onset_col, offset_col)
 
     # Write output to csv file
-    output_file = "{}-Corrected-Transcript.csv".format(input_file)
+    output_file = "{}-Corrected-Transcript.csv".format(os.path.splitext(input_file)[0])
     with open(output_file, "w", newline="") as csvfile:
         # Create a csv writer object
         csvwriter = csv.writer(csvfile)
