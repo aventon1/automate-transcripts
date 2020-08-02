@@ -122,7 +122,6 @@ def replace_text(index_row, orig_text_transcript_col, correct_token_col, onset_c
         # Transcript text is correct, add to list of output
         if ind not in correct_tokens.keys():
             output_rows.append([ind, txt, on, off])
-            # print("{} {} {} {}".format(ind, txt, on, off))
 
         # Get corrected transcript text
         else:
@@ -142,7 +141,6 @@ def replace_text(index_row, orig_text_transcript_col, correct_token_col, onset_c
 
                 # Add to list of output
                 output_rows.append([ind, corrected_text, on, off])
-                # print("{} {} {} {}".format(ind, corrected_text, on, off))
 
             # Process indices with multiple lines
             else:
@@ -163,7 +161,6 @@ def replace_text(index_row, orig_text_transcript_col, correct_token_col, onset_c
 
                 # Add to list of output
                 output_rows.append([ind, corrected_text, on, off])
-                # print("{} {} {} {}".format(ind, corrected_text, on, off))
 
     return output_rows
 
