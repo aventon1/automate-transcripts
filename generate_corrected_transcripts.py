@@ -1,3 +1,7 @@
+#!/usr/bin/python
+
+"""Generates corrected ASR transcripts from reintegrating corrected tokens into original text"""
+
 import sys
 import re
 import csv
@@ -5,6 +9,9 @@ from itertools import zip_longest
 from collections import Counter
 
 import openpyxl
+
+__author__ = "Amina Venton"
+__email__ = "aventon@uw.edu"
 
 
 def get_multi_ind(index_row):
