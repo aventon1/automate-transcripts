@@ -182,7 +182,6 @@ if __name__ == "__main__":
     offset_col = list(sheet[sys.argv[5]])
     correct_token_col = list(sheet[sys.argv[6]])
 
-
     # Remove headers of each column
     index_row.pop(0)
     orig_text_transcript_col.pop(0)
