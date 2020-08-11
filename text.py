@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 class Sentence:
     def __init__(self, string, onset, offset, line_number, correct_token):
         self.string = string
