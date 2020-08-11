@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """Generates corrected ASR transcripts from reintegrating corrected tokens into original text"""
 
 import sys
