@@ -1,6 +1,7 @@
-#!/usr/bin/python
-
 """Generates corrected ASR transcripts from reintegrating corrected tokens into original text"""
+
+__author__ = "Amina Venton"
+__email__ = "aventon@uw.edu"
 
 import sys
 import re
@@ -240,7 +241,15 @@ if __name__ == "__main__":
     output_rows = get_output(sent_dictionary)
 
     # Write output to csv file
-    output_file = "{}-Corrected-Transcript-v2.csv".format(os.path.splitext(input_file)[0])
+    # Input Format is <PNW>-<ID>-<Task>-<Initials>.xlsx
+    path = os.path.splitext(input_file)[0]
+    split_file_words = path.split("-")
+    pnw = split_file_words[0]
+    id = split_file_words[1]
+    task = split_file_words[2]
+
+    # Output Format is <PNW>-<ID>-<Task>-reintegrated.csv
+    output_file = "{}-{}-{}-reintegrated.csv".format(pnw, id, task)
     with open(output_file, "w", newline="") as csvfile:
         # Create a csv writer object
         csvwriter = csv.writer(csvfile)

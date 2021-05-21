@@ -1,4 +1,5 @@
-#!/usr/bin/python
+__author__ = "Amina Venton"
+__email__ = "aventon@uw.edu"
 
 class Sentence:
     def __init__(self, string, onset, offset, line_number, correct_token):
